@@ -13,12 +13,6 @@
       .attr('width', width)
       .attr('height', height);
 
-   // make bottom axis
-   var axisScale = d3.scaleLinear()
-      .domain([1, 12]).range([0, width]);
-   var xAxis = d3.axisBottom().scale(axisScale);
-   svg.append("g").call(xAxis);
-
    // make rects
    var json = [{days: 10, start: 10}, {days: 2, start: 60}];
 
@@ -38,4 +32,13 @@
       })
       .attr('height', 10)
       .style('fill', 'blue');
+
+   // make bottom axis
+   var axisScale = d3.scaleLinear()
+      .domain([1,12])
+      .range([0, width]);
+   var xAxis = d3.axisBottom()
+      .scale(axisScale);
+
+   svg.append("g").call(xAxis);
 })();
