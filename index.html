@@ -4,6 +4,49 @@
     <meta charset="UTF-8">
     <title>D3 playground</title>
     <script src="d3.min.js"></script>
+
+    <style>
+
+        .axis text {
+            font: 10px sans-serif;
+        }
+
+        .chart {
+            position:relative;
+        }
+        svg rect:hover {
+            opacity:0.75;
+        }
+
+        div.tooltip {
+            position: absolute;
+            left:50%;
+            top:50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 4px;
+            font: 12px sans-serif;
+            background: rgba(0,0,0,0.7);
+            border: 0px;
+            -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+            border-radius:4px;
+            color:#fff;
+            pointer-events: none;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #878787;
+            shape-rendering: crispEdges;
+        }
+
+    </style>
 </head>
 <body>
     <div class="chart"></div>
